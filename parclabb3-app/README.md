@@ -111,6 +111,12 @@ Se trabaja con componentes por razones principales: Reusabilidad, Separación de
 props: es el objeto que viene incluido en todo componente de React, puede poseer elnombre que queramos pero en general se lo llama props.
 De esta manera, el componente hijo puede acceder a atributos que posee el componente padre.
 
+¿Que retorna useState? Retorna un arreglo con dos valores, el primer valor es nuestra
+nueva variable ya inicializada y el segundo es una función que nos servirá para setear el
+valor de dicha variable. Para obtener ambios se puede usar array destructuring.
+
+const [newTitle, setNewTitle] = useState(title);
+
 
 ###
 
@@ -193,9 +199,9 @@ const Calculadora = () => {
 
     const [numero1, setNumero1] = useState(0)
     const [numero2, setNumero2] = useState(0)
-     const [suma, setSuma] = useState(0)
+    const [suma, setSuma] = useState(0)
 
-     const seteoDeNum1 = (e) => {
+    const seteoDeNum1 = (e) => {
         setNumero1(e.target.value)
     }
 
